@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Live Event</title>
+  <script src="https://player.live-video.net/1.20.0/amazon-ivs-player.min.js"></script>
+  <style>
+    body { margin:0; background:black; }
+    video { width:100%; height:100vh; }
+  </style>
+</head>
+<body>
+  <video id="video-player" controls playsinline></video>
+
+  <script>
+    const player = IVSPlayer.create();
+    const video = document.getElementById("video-player");
+    player.attachHTMLVideoElement(video);
+
+    player.load("https://ad30f39d4dfb.us-east-1.playback.live-video.net/api/video/v1/us-east-1.664858859043.channel.0xEfXXKtMef2.m3u8i");
+    player.setAutoplay(true);
+  </script>
+</body>
+</html>
